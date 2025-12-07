@@ -1,0 +1,184 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Très important pour la mise en page */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Couleur de fond légère */
+    color: #333;
+    scroll-behavior: smooth; /* Défilement doux entre les sections */
+}
+
+/* --- Typographie et Liens --- */
+h1, h2, h3 {
+    color: #2c3e50; /* Couleur d'en-tête sombre */
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #3498db; /* Couleur de lien principale (bleu vif) */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* --- Header et Navigation --- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Rendre la navigation fixe */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul a {
+    font-weight: bold;
+    color: #333;
+    padding: 0.5rem 0;
+}
+
+nav ul a:hover {
+    color: #3498db;
+}
+
+/* --- Sections Générales --- */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Section Héro (Accueil) --- */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #ecf0f1; /* Fond gris très clair */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* --- Section Projets --- */
+.projects {
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Petit effet au survol */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 5px;
+    font-weight: normal;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+/* --- Media Queries (pour la réactivité) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
