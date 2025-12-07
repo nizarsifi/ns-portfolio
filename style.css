@@ -1,184 +1,192 @@
+/* Variables pour les couleurs */
+:root {
+    --primary-color: #007BFF; /* Bleu pour le professionnel */
+    --secondary-color: #6C757D; /* Gris secondaire */
+    --text-color: #343A40;
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+}
+
 /* Réinitialisation de base */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Très important pour la mise en page */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9; /* Couleur de fond légère */
-    color: #333;
-    scroll-behavior: smooth; /* Défilement doux entre les sections */
+    color: var(--text-color);
+    background-color: var(--white);
 }
 
-/* --- Typographie et Liens --- */
-h1, h2, h3 {
-    color: #2c3e50; /* Couleur d'en-tête sombre */
-    margin-bottom: 1rem;
-}
-
-a {
-    color: #3498db; /* Couleur de lien principale (bleu vif) */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #2980b9;
-}
-
-/* --- Header et Navigation --- */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Rendre la navigation fixe */
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 20px;
+    margin: auto;
+    overflow: hidden;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #3498db;
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-size: 2.2em;
+}
+
+/* --- HEADER / NAVIGATION --- */
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #DDDDDD;
+}
+
+/* --- BOUTON --- */
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0056B3;
+}
+
+
+/* --- ABOUT SECTION --- */
+#about h2 {
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+
+/* --- EXPÉRIENCE / PROJETS --- */
+.job-entry, .project-entry {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.job-entry h3, .project-entry h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.job-meta, .project-meta {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.job-entry ul, .project-entry ul {
+    list-style: disc;
     margin-left: 20px;
 }
 
-nav ul a {
-    font-weight: bold;
-    color: #333;
-    padding: 0.5rem 0;
-}
-
-nav ul a:hover {
-    color: #3498db;
-}
-
-/* --- Sections Générales --- */
-section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- Section Héro (Accueil) --- */
-.hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: #ecf0f1; /* Fond gris très clair */
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-/* Bouton */
-.btn {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
-
-/* --- Section Projets --- */
-.projects {
-    text-align: center;
-}
-
-.project-grid {
+/* --- COMPÉTENCES --- */
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.project-card {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px); /* Petit effet au survol */
-}
-
-/* --- Footer --- */
-footer {
-    background-color: #2c3e50;
-    color: white;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     text-align: center;
-    padding: 20px 20px;
-    font-size: 0.9rem;
 }
 
-.social-links a {
-    color: white;
-    margin: 0 5px;
-    font-weight: normal;
+.skill-category {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.social-links a:hover {
-    color: #3498db;
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
 }
 
-/* --- Media Queries (pour la réactivité) --- */
+/* --- FOOTER / CONTACT --- */
+footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer h2 {
+    color: var(--white);
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* --- RESPONSIVE BASIQUE --- */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    nav ul {
-        margin-top: 10px;
-        justify-content: center;
+    header h1 {
+        font-size: 2.5em;
     }
 
     nav ul li {
-        margin: 0 10px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
+        display: block;
+        margin: 10px 0;
     }
 }
