@@ -3,65 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Nizar SIFI</title>
+    <title>Portfolio - Nizar SIFI | Technicien Informatique</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Nizar SIFI</div>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#a-propos">À Propos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+    <header id="home">
+        <div class="container">
+            <h1>Nizar SIFI</h1>
+            <p>Technicien Informatique Polyvalent</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">Profil</a></li>
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <h1>Bonjour, je suis un Développeur</h1>
-            <p>Un Développeur Web, passionné par le domaine de la Technologie de l'information.</p>
-            <a href="#projets" class="btn">Voir mes Projets</a>
-        </div>
-        
-    </section>
-
-    <section id="projets" class="projects">
-        <h2>Mes Réalisations</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Projet 1</h3>
-                <p>Brève description de votre premier projet. Technologie(s) utilisée(s).</p>
-                <a href="#" target="_blank">Voir le projet</a>
-            </div>
-            <div class="project-card">
-                <h3>Projet 2</h3>
-                <p>Brève description de votre deuxième projet. Technologie(s) utilisée(s).</p>
-                <a href="#" target="_blank">Voir le projet</a>
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2>À Propos de Moi</h2>
+            <div class="about-content">
+                <p>Technicien informatique polyvalent cumulant plusieurs années d’expérience en support technique (niveaux 1 et 2), en administration de systèmes, en gestion d’infrastructures réseau et en déploiement de solutions Microsoft 365. Solide expérience en diagnostics, résolution d’incidents, virtualisation, installation matérielle et maintenance applicative.</p>
+                <p>Capacité démontrée à travailler en environnement industriel et corporatif, avec un excellent sens du service à la clientèle et une forte aptitude à la documentation.</p>
+                <a href="chemin/vers/votre/cv.pdf" class="btn-primary" download>Télécharger mon CV</a>
             </div>
         </div>
     </section>
 
-    <section id="a-propos" class="about">
-        <h2>À Propos de Moi</h2>
-        <p>Parlez de votre parcours, de vos compétences et de ce qui vous passionne. C'est l'endroit idéal pour inclure une photo professionnelle.</p>
+    <section id="experience" class="bg-light section-padding">
+        <div class="container">
+            <h2>Expérience Professionnelle</h2>
+            
+            <div class="job-entry">
+                <h3>Technicien informatique - UNNO</h3>
+                <p class="job-meta">Août 2022 – Aujourd’hui | Drummondville</p>
+                <ul>
+                    <li>Support technique niveaux 1 et 2, diagnostic et résolution des problèmes (postes, imprimantes, applications).</li>
+                    <li>Gestion des comptes utilisateurs et des accès Microsoft 365.</li>
+                    <li>Installation, configuration et migration des équipements informatiques.</li>
+                    <li>Documentation des interventions et participation aux projets TI.</li>
+                </ul>
+            </div>
+            
+            <div class="job-entry">
+                <h3>Technicien informatique - Beaulieu Canada</h3>
+                <p class="job-meta">Mars 2021 – Octobre 2024 | Industrie textile</p>
+                <ul>
+                    <li>Déploiement et maintien de l’infrastructure réseau et des services corporatifs (AD, environnement virtuel).</li>
+                    <li>Administration des systèmes d’exploitation, serveurs et bases de données.</li>
+                    <li>Réalisation d’audits de sécurité et application des correctifs.</li>
+                    <li>Déploiement manuel et automatisé de logiciels.</li>
+                </ul>
+            </div>
+
+            </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Me Contacter</h2>
-        <p>N'hésitez pas à me contacter pour toute collaboration ou opportunité !</p>
-        <a href="mailto:votre.email@exemple.com" class="btn">Envoyez un email</a>
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2>Projets Clés</h2>
+
+            <div class="project-entry">
+                <h3>Migration vers Microsoft 365 (Beaulieu Canada)</h3>
+                <p class="project-meta">Mars 2023 (3 mois)</p>
+                <ul>
+                    <li>Migration d’Exchange local vers **Microsoft 365**.</li>
+                    <li>Mise en place de stratégies de sauvegarde **OneDrive** et migration vers **SharePoint**.</li>
+                    <li>Gestion et configuration des licences et boîtes partagées.</li>
+                </ul>
+            </div>
+
+            <div class="project-entry">
+                <h3>Projet Réseau WiFi (Beaulieu Canada)</h3>
+                <p class="project-meta">Octobre 2022 (2 mois)</p>
+                <ul>
+                    <li>Installation et configuration de points d’accès **UniFi** et mise en place d’un Cloud Key.</li>
+                    <li>Configuration du pare-feu et application des règles de filtrage MAC (réseaux public et production).</li>
+                </ul>
+            </div>
+            
+            <div class="project-entry">
+                <h3>Développement Logiciel (FILIN)</h3>
+                <p class="project-meta">Janvier 2018 (11 mois)</p>
+                <ul>
+                    <li>Création d'une application **VB.Net** pour la gestion et l’étiquetage des bobines (PDA Zebra MC32).</li>
+                    <li>Développement d’un outil de gestion des classes de bobines (**VB.Net + Access**).</li>
+                </ul>
+            </div>
+
+            </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 [Votre Nom]. Tous droits réservés.</p>
-        <div class="social-links">
-            <a href="#" target="_blank">LinkedIn</a> |
-            <a href="#" target="_blank">GitHub</a> |
-            <a href="#" target="_blank">X/Instagram</a>
+    <section id="skills" class="bg-light section-padding">
+        <div class="container">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h3>Outils Microsoft & Cloud</h3>
+                    <p>Microsoft 365, Exchange, SharePoint, OneDrive, Active Directory</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Réseaux & Infrastructure</h3>
+                    <p>TCP/IP, IPv4/IPv6, WiFi, VLAN, VPN, Firewalls, LAN/Intranet, HPE Aruba</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Systèmes & Virtualisation</h3>
+                    <p>Windows (XP/7/8/10/11), Linux, macOS, VMware</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Développement & BD</h3>
+                    <p>ASP.Net, VB.Net, C#, Java, HTML5, CSS3, JavaScript, MySQL, SQL Server, MS Access</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Méthodologies</h3>
+                    <p>MERISE, UML, Agile (Scrum), Design Patterns</p>
+                </div>
+
+            </div>
         </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <p>N'hésitez pas à me contacter pour discuter d'opportunités.</p>
+            <div class="contact-info">
+                <p><strong>Courriel :</strong> nizarsifi@hotmail.com</p>
+                <p><strong>Téléphone :</strong> 450-779-9305</p>
+                <p><strong>Localisation :</strong> Saint-Hyacinthe, Québec</p>
+                </div>
+            </div>
     </footer>
+
 </body>
 </html>
